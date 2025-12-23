@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eduLessonPRO | Generator RPP Berbasis Iman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        /* Custom CSS untuk efek kartu timbul (Claymorphism/Neumorphism halus) */
+        .clay-card {
+            border-radius: 24px;
+            background: #ffffff;
+            box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+            transition: all 0.3s ease;
+        }
+        .clay-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 12px 12px 24px #d1d9e6, -12px -12px 24px #ffffff;
+        }
+        /* Agar gambar di dalam kartu sudutnya ikut membulat di bagian atas */
+        .card-image-container img {
+             border-top-left-radius: 24px;
+             border-top-right-radius: 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <nav class="p-5 bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="h-10 w-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-sm">
+                     <span class="text-white font-bold text-xl">eL</span>
+                </div>
+                <h1 class="text-2xl font-extrabold text-blue-700 tracking-tight">edu<span class="text-orange-500">LessonPRO</span></h1>
+            </div>
+            
+            <div class="space-x-8 hidden md:flex items-center font-medium">
+                <a href="#" class="text-slate-600 hover:text-blue-600 transition">Beranda</a>
+                <a href="#" class="text-slate-600 hover:text-blue-600 transition">Fitur IFVL</a>
+                <button class="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-2.5 rounded-full hover:shadow-lg hover:from-blue-700 hover:to-blue-600 transition ease-in-out duration-300 font-semibold">
+                    Mulai Buat RPP
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mx-auto px-6 py-16 md:py-24 flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="md:w-1/2 text-center md:text-left">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-600 text-sm font-semibold mb-4">
+                ⭐ Inovasi Terbaru dari Edunexus
+            </span>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-slate-900">
+                Rancang Pembelajaran <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">Cerdas & Beriman.</span>
+            </h2>
+            <p class="text-slate-600 text-lg mb-8 leading-relaxed max-w-lg mx-auto md:mx-0">
+                eduLessonPRO membantu guru menyusun Modul Ajar Kurikulum Merdeka yang secara otomatis mengintegrasikan nilai-nilai iman (IFVL) dalam hitungan menit.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                 <button class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
+                    </svg>
+                    Coba Generator Sekarang
+                </button>
+                <a href="#fitur" class="px-8 py-4 rounded-full font-bold text-slate-600 border-2 border-slate-200 hover:border-blue-400 hover:text-blue-600 transition flex items-center justify-center">
+                    Pelajari Fitur
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 relative">
+            <div class="absolute top-0 -right-4 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
+            <div class="absolute -bottom-8 left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
+            
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Guru merencanakan pembelajaran dengan bahagia" class="relative rounded-[40px] shadow-2xl border-4 border-white z-10 w-full object-cover h-[500px] clay-card">
+        </div>
+    </header>
+
+    <section id="fitur" class="container mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-bold text-slate-800 mb-4">Mengapa Memilih eduLessonPRO?</h3>
+            <p class="text-slate-600 max-w-2xl mx-auto">Kami menggabungkan teknologi AI tercanggih dengan prinsip pendidikan Kristen untuk menghasilkan perangkat ajar yang holistik.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+            <div class="clay-card p-0 flex flex-col h-full">
+                <div class="h-48 overflow-hidden card-image-container bg-blue-50">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Buku dan Kurikulum" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition hover:scale-105 duration-500">
+                </div>
+                <div class="p-8">
+                    <h4 class="text-xl font-bold mb-3 text-blue-900">Standar Kurikulum Merdeka</h4>
+                    <p class="text-slate-500 leading-relaxed">Otomatis menghasilkan RPP/Modul Ajar, LKPD, dan Rubrik Penilaian yang sesuai regulasi terbaru Kemendikbud.</p>
+                </div>
+            </div>
+
+            <div class="clay-card p-0 flex flex-col h-full transform md:-translate-y-4 border-b-4 border-orange-400">
+                <div class="h-48 overflow-hidden card-image-container bg-orange-50 relative">
+                     <div class="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">Unggulan</div>
+                    <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cahaya dan Alkitab" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition hover:scale-105 duration-500">
+                </div>
+                <div class="p-8">
+                    <h4 class="text-xl font-bold mb-3 text-orange-700">Integrasi IFVL Mendalam</h4>
+                    <p class="text-slate-500 leading-relaxed">Menyisipkan nilai-nilai iman dan karakter Alkitabiah (GMAHK) secara relevan ke dalam langkah-langkah pembelajaran, bukan sekadar tempelan.</p>
+                </div>
+            </div>
+
+            <div class="clay-card p-0 flex flex-col h-full">
+                <div class="h-48 overflow-hidden card-image-container bg-purple-50">
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Desain Kreatif" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition hover:scale-105 duration-500">
+                </div>
+                <div class="p-8">
+                    <h4 class="text-xl font-bold mb-3 text-purple-900">Output Siap Pakai</h4>
+                    <p class="text-slate-500 leading-relaxed">Hasil generasi berupa teks terformat rapi (Markdown/Tabel) yang siap Anda salin langsung ke dokumen kerja Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-20 bg-slate-100 text-center">
+        <p class="text-slate-400 italic">[Area ini siap untuk Formulir Mega-Prompt Anda]</p>
+    </section>
+
+
+    <footer class="bg-white border-t py-12 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-blue-700 tracking-tight mb-4">edu<span class="text-orange-500">LessonPRO</span></h2>
+            <p class="text-slate-400 text-sm mb-6">
+                Bagian dari ekosistem Edunexus. <br> Dibuat dengan ❤️ di Manado - Langowan untuk kemajuan pendidikan Kristen di Indonesia.
+            </p>
+            <p class="text-slate-300 text-xs">&copy; 2025 Edunexus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8"><title>Login eduLessonPRO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md bg-white p-8 rounded-3xl shadow-xl">
+        <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">Login Member</h2>
+        <form onsubmit="handleLogin(event)" class="space-y-4">
+            <input type="text" id="logUser" placeholder="Username" required class="w-full border p-3 rounded-xl outline-none">
+            <input type="password" id="logPass" placeholder="Password" required class="w-full border p-3 rounded-xl outline-none text-sm">
+            <button type="submit" id="btn" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold shadow-lg">Masuk Dashboard</button>
+        </form>
+    </div>
+    <script>
+        async function handleLogin(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btn'); btn.innerText = "Mengecek Database...";
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzv4azWHXvtaX3n1fobQZr8WGzYQ_RhuP8Wda_wxavJ1uOafsKm267E3t-NPZ1E5G_j/exec';
+            
+            try {
+                const resp = await fetch(scriptURL);
+                const users = await resp.json();
+                const match = users.find(u => u.username === document.getElementById('logUser').value && u.pass === document.getElementById('logPass').value);
+                
+                if (match) {
+                    localStorage.setItem('userAccount', JSON.stringify({...match, isPaid: match.status === 'Active'}));
+                    window.location.href = (match.status === 'Active') ? "edulesson.html" : "payment.html";
+                } else { alert("Username/Password salah!"); btn.innerText = "Masuk Dashboard"; }
+            } catch (e) { alert("Error koneksi!"); btn.innerText = "Masuk Dashboard"; }
+        }
+    </script>
+</body>
+</html>

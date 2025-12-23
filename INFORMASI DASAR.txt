@@ -1,0 +1,15 @@
+INFORMASI DASAR
+- Nama Guru (text input)
+- Nama Institusi  (text input)
+- Jenjang (PAUD, TK, SD, SMP, SMA)
+- Fase (A (1-2 SD), B (3-4 SD), C (5-6 SD), D (7-9 SMP), E (X-XI SMA), F (XII SMA))
+- Kelas (PAUD, TK, 1 SD, 2 SD, 3 SD, 4 SD, , 5 SD, , 6 SD, , 7 SMP,  8 SMP,  9 SMP,  10 SMA,  11 SMA,  12 SMA)
+- Mata Pelajaran (text input)
+
+DETAIL PEMBELAJARAN
+- Materi Pokok / Judul (text input)
+- Model Pembelajaran (Project-Based Learning (PBL), Problem-Based Learning (PBL), Discovery / Inquiry Learning, Deep Learning, Cooperative Learning, Daring/Online, Blended Learning, Gamification)
+- Durasi (menit) (text input, numbers ONLY)
+- Jumlah Pertemuuan (text input, numbers ONLY)
+- Profil Pelajar Pancasila (multiple choice) (Beriman, Bertakwa kepada Tuhan YME, Berakhlak Mulia, Berkebinekaan Global, Bergotong Royong, Mandiri, Bernalar Kritis, Kreatif)
+- Dimensi Profil Lulusan (multiple choice) (Keimanan dan Ketaqwaan, Kewargaan, Penalaran Kritis, Kreativitas, Kolaborasi, Kemandirian, Kesehatan, Komunikasi)

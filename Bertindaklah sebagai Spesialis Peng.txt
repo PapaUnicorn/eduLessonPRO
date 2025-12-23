@@ -1,0 +1,37 @@
+"Bertindaklah sebagai Spesialis Pengembang Kurikulum Kemendikbud sekaligus Pakar Pendidikan Advent yang ahli dalam mengintegrasikan Faith and Values (IFVL). Tugas Anda adalah menyusun Modul Ajar Kurikulum Merdeka yang komprehensif.
+
+
+
+BERIKUT ADALAH DATA INPUT SAYA:
+
+- Nama Guru: [Isi Nama]
+- Institusi: [Isi Nama Sekolah]
+- Jenjang: [Pilih: PAUD, TK, SD, SMP, SMA]
+- Fase: [Pilih: A (1-2 SD), B (3-4 SD), C (5-6 SD), D (7-9 SMP), E (X-XI SMA), F (XII SMA)]
+- Kelas: [Pilih: PAUD, TK, 1 SD, 2 SD, 3 SD, 4 SD, , 5 SD, , 6 SD, , 7 SMP,  8 SMP,  9 SMP,  10 SMA,  11 SMA,  12 SMA]
+- Mata Pelajaran: [Isi Mata Pelajaran]
+- Materi Pokok / Judul: [Isi Judul]
+- Model Pembelajaran: [Pilih: Project-Based Learning (PBL), Problem-Based Learning (PBL), Discovery / Inquiry Learning, Deep Learning, Cooperative Learning, Daring/Online, Blended Learning, Gamification]
+- Durasi (Menit): [isi menit]
+- Jumlah Pertemuan: [Isi Jumlah Pertemuan]
+- Profil Pelajar Pancasila (P3): [Multiple Choice: Beriman, Bertakwa kepada Tuhan YME, Berakhlak Mulia, Berkebinekaan Global, Bergotong Royong, Mandiri, Bernalar Kritis, Kreatif]
+- Dimensi Profil Lulusan: [Multiple Choice: Keimanan dan Ketaqwaan, Kewargaan, Penalaran Kritis, Kreativitas, Kolaborasi, Kemandirian, Kesehatan, Komunikasi]
+
+STRUKTUR OUTPUT YANG SAYA MINTA:
+
+A. IDENTITAS & KOMPETENSI (Tabel)
+Sajikan data input di atas dalam tabel yang rapi, sertakan Capaian Pembelajaran (CP) dan Tujuan Pembelajaran (TP) yang sesuai.
+
+B. INTEGRASI IFVL (GMAHK)
+Identifikasi konsep Alkitabiah atau nilai GMAHK yang relevan dengan materi ini (Contoh: Karakter Pencipta, Stewardship/Penatalayanan, atau Hukum Alam sebagai Hukum Tuhan). Sertakan satu ayat Alkitab atau kutipan Roh Nubuat (Ellen G. White) yang mendasari filosofi materi ini.
+
+C. LANGKAH PEMBELAJARAN (Sesuai Sintaks dalam bentuk table dua kolom, kolom paling kanan adalah deskripsi/konten)
+Susun langkah kegiatan (Pendahuluan, Inti, Penutup) berdasarkan model pembelajaran yang dipilih. Di setiap tahap kegiatan, sisipkan instruksi bagaimana guru melakukan integrasi nilai (IFVL) secara praktis.
+
+D. LKPD (LEMBAR KERJA PESERTA DIDIK)
+Buat LKPD interaktif, lengkap, dan sangat detail dalam bentuk kolom yang mencakup tugas eksplorasi materi akademik dan satu bagian refleksi spiritual (Faith Link), termasuk pembuatan 10 soal Latihan beserta dengan kunci jawaban dan penjelasannya..
+
+E. ASESMEN & RUBRIK (Tabel)
+Buat rubrik penilaian yang mengukur ketercapaian akademik sekaligus ketercapaian Dimensi Profil Lulusan yang telah dipilih.
+
+Gunakan bahasa Indonesia yang edukatif, profesional, dan inspiratif. Pastikan format Markdown digunakan agar mudah dibaca."

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8"><title>Generator eduLessonPRO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        (function(){
+            const u = JSON.parse(localStorage.getItem('userAccount'));
+            const now = new Date();
+            if(!u || !u.isPaid || now > new Date(u.expiry)) {
+                alert("Akses Ditolak/Expired! Hubungi Admin."); window.location.href="payment.html";
+            }
+        })();
+    </script>
+</head>
+<body class="bg-slate-50 flex flex-col md:flex-row h-screen overflow-hidden">
+    <div class="w-full md:w-5/12 p-6 flex flex-col gap-4 border-r overflow-y-auto">
+        <div class="text-blue-700 font-bold text-2xl">eduLessonPRO</div>
+        <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-orange-500 text-xs">Isi form di kanan, klik Generate, lalu paste di Gemini.</div>
+        <div id="btnArea" class="mt-4">
+             <button onclick="processPrompt()" class="w-full bg-orange-500 text-white py-4 rounded-xl font-bold">Generate Prompt</button>
+             <button onclick="window.open('https://gemini.google.com/app','_blank')" class="w-full mt-2 bg-blue-600 text-white py-4 rounded-xl font-bold">Buka Gemini</button>
+        </div>
+    </div>
+    <div class="w-full md:w-7/12 p-8 bg-white overflow-y-auto">
+        <h2 class="font-bold mb-4">Detail Perangkat Ajar</h2>
+        <div class="grid grid-cols-1 gap-4">
+            <input type="text" id="guru" placeholder="Nama Guru" class="border p-3 rounded-lg text-sm">
+            <input type="text" id="materi" placeholder="Materi Pokok" class="border p-3 rounded-lg text-sm">
+            </div>
+    </div>
+
+    <script>
+        function processPrompt() {
+            const prompt = `Buatkan Modul Ajar lengkap materi ${document.getElementById('materi').value}. 
+            PENTING: Anda WAJIB menuliskan secara lengkap 10 soal latihan satu per satu (JANGAN DISINGKAT dengan 'dan seterusnya'), sertakan kisi-kisi, kunci jawaban, dan materi lengkap per pertemuan dengan referensi Youtube/Blog.`;
+            navigator.clipboard.writeText(prompt); alert("Prompt Tersalin!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8"><title>Admin Panel Edunexus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        (function(){
+            const u = JSON.parse(localStorage.getItem('userAccount'));
+            if(!u || u.privilege !== 'Admin') { alert("Akses Ditolak!"); window.location.href="index.html"; }
+        })();
+    </script>
+</head>
+<body class="bg-slate-100 p-8 font-['Poppins']">
+    <div class="max-w-6xl mx-auto bg-white p-8 rounded-3xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-8">Admin Dashboard</h2>
+        <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50"><tr><th class="p-4">User</th><th class="p-4">Pass (Plain)</th><th class="p-4">Expiry</th><th class="p-4">Privilege</th><th class="p-4">Aksi</th></tr></thead>
+            <tbody id="userList"></tbody>
+        </table>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzv4azWHXvtaX3n1fobQZr8WGzYQ_RhuP8Wda_wxavJ1uOafsKm267E3t-NPZ1E5G_j/exec';
+        async function load(){
+            const resp = await fetch(scriptURL); const users = await resp.json();
+            document.getElementById('userList').innerHTML = users.map(u => `
+                <tr class="border-b">
+                    <td class="p-4 font-bold">${u.username}</td>
+                    <td class="p-4">${u.pass}</td>
+                    <td class="p-4">${new Date(u.expiry).toLocaleDateString()}</td>
+                    <td class="p-4">
+                        <select id="p-${u.username}" class="border p-1"><option ${u.privilege==='User'?'selected':''}>User</option><option ${u.privilege==='Admin'?'selected':''}>Admin</option></select>
+                    </td>
+                    <td class="p-4"><button onclick="upd('${u.username}')" class="bg-blue-600 text-white px-3 py-1 rounded">Update</button></td>
+                </tr>`).join('');
+        }
+        async function upd(un){
+            const data = { action: "updateUser", username: un, privilege: document.getElementById('p-'+un).value, status: "Active", expiry: new Date(new Date().setFullYear(new Date().getFullYear()+1)).toISOString() };
+            await fetch(scriptURL, {method:'POST', body:JSON.stringify(data)}); alert("Updated!"); load();
+        }
+        load();
+    </script>
+</body>
+</html>
